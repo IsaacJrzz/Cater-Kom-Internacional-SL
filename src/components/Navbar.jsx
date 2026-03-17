@@ -1,6 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+// Sub-componente para los enlaces normales con transición suave
+const NavLink = ({ href, children }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const linkStyle = {
+    textDecoration: 'none',
+    color: isHovered ? '#d69e2e' : '#128FCC', 
+    fontWeight: '600',
+    fontSize: '1.1rem',
+    transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)', 
+    padding: '0 10px',
+    display: 'inline-block'
+  };
+
+  return (
+    <a
+      href={href}
+      style={linkStyle}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {children}
+    </a>
+  );
+};
 
 export default function Navbar() {
+  const [btnHover, setBtnHover] = useState(false);
+
   return (
     <nav style={navStyle}>
       {/* Logotipo */}
@@ -10,11 +38,20 @@ export default function Navbar() {
 
       {/* Enlaces de Navegación */}
       <ul style={ulStyle}>
-        <li><a href="#inicio" style={linkStyle}>Inicio</a></li>
-        <li><a href="#servicios" style={linkStyle}>Servicios</a></li>
-        <li><a href="#nosotros" style={linkStyle}>Nosotros</a></li>
+        <li><NavLink href="#inicio">Inicio</NavLink></li>
+        <li><NavLink href="#servicios">Servicios</NavLink></li>
+        <li><NavLink href="#nosotros">Nosotros</NavLink></li>
         <li>
-          <a href="#contacto" style={contactBtnStyle}>
+          <a 
+            href="#contacto" 
+            onMouseEnter={() => setBtnHover(true)}
+            onMouseLeave={() => setBtnHover(false)}
+            style={{
+              ...contactBtnStyle,
+              backgroundColor: btnHover ? '#d69e2e' : '#128FCC',
+              boxShadow: btnHover ? '0 5px 15px rgba(0,0,0,0.2)' : 'none',
+            }}
+          >
             Contacto
           </a>
         </li>
@@ -23,7 +60,7 @@ export default function Navbar() {
   );
 }
 
-// --- ESTILOS (Objetos de JavaScript) ---WSSS
+// --- ESTILOS ---
 
 const navStyle = {
   display: 'flex',
@@ -35,7 +72,7 @@ const navStyle = {
   top: 0,
   zIndex: 1000,
   width: '100%',
-  padding: '20px 5%', // <-- Centralizamos el padding aquí para que todo esté alineado
+  padding: '20px 5%',
   boxSizing: 'border-box',
 };
 
@@ -44,34 +81,25 @@ const logoStyle = {
   fontWeight: 'bold',
   color: '#128FCC',
   letterSpacing: '1px',
-  // Quitamos el padding de aquí para que no descuadre el flex
 };
 
 const ulStyle = {
   display: 'flex',
   listStyle: 'none',
-  gap: '60px', // <-- Aumentado de 30px a 60px para que haya mucho más espacio
+  gap: '60px',
   alignItems: 'center',
   margin: 0,
   padding: 0,
 };
 
-const linkStyle = {
-  textDecoration: 'none',
-  color: '#128FCC',
-  fontWeight: '500',
-  fontSize: '1.1rem',
-  transition: '0.3s',
-};
-
 const contactBtnStyle = {
   textDecoration: 'none',
-  backgroundColor: '#128FCC',
   color: 'white',
-  padding: '12px 28px', // <-- Botón un poco más grande y estilizado
-  borderRadius: '8px',  // Un poco más de redondeado para look moderno
+  padding: '12px 28px',
+  borderRadius: '8px',
   fontSize: '1.1rem',
   fontWeight: 'bold',
-  transition: 'all 0.3s ease',
   display: 'inline-block',
+  // Transición suave para el color de fondo, la sombra y el movimiento
+  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)', 
 };

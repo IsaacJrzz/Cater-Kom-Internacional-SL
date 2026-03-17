@@ -73,4 +73,4 @@ Desarrollador: [Mark Iza](https://github.com/MARK-IZA).
 
 
 > *Este sitio web representa la identidad digital y el compromiso de Cater-Kom con la expansión comercial sin fronteras.* 
->>>>>>> 21c4e40d368b02b72b4c91a7c6e859346e9305b6
+>>>>>> 21c4e40d368b02b72b4c91a7c6e859346e9305b6
