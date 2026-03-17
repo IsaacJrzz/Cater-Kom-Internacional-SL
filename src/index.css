@@ -1,8 +1,7 @@
 /* src/index.css */
 
 /* 1. Reseteo universal: Quitamos márgenes y padding de absolutamente TODO */
-* {
-  margin: 0 !important; /* El !important fuerza la regla */
+* {/* El !important fuerza la regla */
   box-sizing: border-box !important;
 }
 

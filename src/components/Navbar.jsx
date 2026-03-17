@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav style={navStyle}>
       {/* Logotipo */}
       <div style={logoStyle}>
-        CATER-KOM <span style={{ color: '#ff0000', fontWeight: '500' }}>INTERNACIONAL</span>
+        CATER-KOM <span style={{ color: '#000000', fontWeight: '500' }}>INTERNACIONAL</span>
       </div>
 
       {/* Enlaces de Navegación */}
@@ -23,52 +23,55 @@ export default function Navbar() {
   );
 }
 
-// --- ESTILOS (Objetos de JavaScript) ---
+// --- ESTILOS (Objetos de JavaScript) ---WSSS
 
-// src/components/Navbar.jsx
 const navStyle = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  padding: '15px 5%', // El 5% es padding interno, no margen externo
   backgroundColor: '#ffffff',
   boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
   position: 'sticky',
   top: 0,
   zIndex: 1000,
-  width: '100%', // <--- Asegúrate de que esta línea esté aquí
+  width: '100%',
+  padding: '20px 5%', // <-- Centralizamos el padding aquí para que todo esté alineado
+  boxSizing: 'border-box',
 };
 
 const logoStyle = {
-  fontSize: '1.4rem',
+  fontSize: '1.5rem',
   fontWeight: 'bold',
-  color: '#1a365d', // Azul oscuro corporativo
+  color: '#128FCC',
   letterSpacing: '1px',
+  // Quitamos el padding de aquí para que no descuadre el flex
 };
 
 const ulStyle = {
   display: 'flex',
   listStyle: 'none',
-  gap: '30px',
+  gap: '60px', // <-- Aumentado de 30px a 60px para que haya mucho más espacio
   alignItems: 'center',
   margin: 0,
+  padding: 0,
 };
 
 const linkStyle = {
   textDecoration: 'none',
-  color: '#4a5568',
+  color: '#128FCC',
   fontWeight: '500',
-  fontSize: '0.95rem',
+  fontSize: '1.1rem',
   transition: '0.3s',
 };
 
 const contactBtnStyle = {
   textDecoration: 'none',
-  backgroundColor: '#1a365d',
+  backgroundColor: '#128FCC',
   color: 'white',
-  padding: '8px 20px',
-  borderRadius: '5px',
-  fontSize: '0.9rem',
+  padding: '12px 28px', // <-- Botón un poco más grande y estilizado
+  borderRadius: '8px',  // Un poco más de redondeado para look moderno
+  fontSize: '1.1rem',
   fontWeight: 'bold',
-  transition: 'background-color 0.3s',
+  transition: 'all 0.3s ease',
+  display: 'inline-block',
 };

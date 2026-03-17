@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer id="footer" style={{
       minHeight: '40vh',
-      backgroundColor: '#0d1b2a',
+      backgroundColor: '#0b1118',
       color: '#cbd5e0',
       display: 'flex',
       flexDirection: 'column',
