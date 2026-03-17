@@ -61,9 +61,9 @@ La plataforma se organiza en los siguientes módulos:
 
 ## 📧 Contacto y Desarrollo
 
-Proyecto desarrollado para **Cater-Kom Internacional SL**.  
-Desarrollador: [Isaac Alonso](https://github.com/IsaacJrzz).
-Desarrollador: [Fernando Carrasco](https://github.com/BalantryFernando).
+Proyecto desarrollado para **Cater-Kom Internacional SL**.  (aquí van dos espacios)
+Desarrollador: [Isaac Alonso](https://github.com/IsaacJrzz).  (aquí van dos espacios)
+Desarrollador: [Fernando Carrasco](https://github.com/BalantryFernando).  (aquí van dos espacios)
 Desarrollador: [Mark Iza](https://github.com/MARK-IZA).
 
 ---
