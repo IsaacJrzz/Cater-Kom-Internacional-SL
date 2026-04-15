@@ -21,3 +21,158 @@ body, #root {
   overflow-x: hidden; /* Evita desplazamiento lateral innecesario */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+/* Navbar Flotante */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 90%;
+  max-width: 1200px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+/* Logotipo */
+.nav-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #128FCC;
+  letter-spacing: 1px;
+}
+
+.nav-logo span {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Lista de enlaces */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Enlaces individuales */
+.nav-link {
+  text-decoration: none;
+  color: #128FCC;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.4s ease;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  color: #d69e2e;
+}
+
+/* Botón de contacto */
+.nav-btn-contact {
+  text-decoration: none;
+  color: white;
+  background-color: #128FCC;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.nav-btn-contact:hover {
+  background-color: #d69e2e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(214, 158, 46, 0.4);
+}
+
+/* Responsive básico para móviles */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* Aquí podrías luego implementar un menú hamburguesa */
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Animación de movimiento de colores */
+@keyframes fluidBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+  
+  /* Degradado dinámico con tus colores corporativos */
+  background: linear-gradient(-45deg, #128FCC, #0a192f, #d69e2e, #074b6d);
+  background-size: 400% 400%;
+  animation: fluidBackground 15s ease infinite;
+  
+  /* Suavizado para que el texto resalte siempre */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto opcional: una capa de ruido o textura muy sutil */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.hero-title {
+  font-size: 5rem; /* Un poco más grande para impacto */
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  z-index: 1;
+}
+
+.hero-subtitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  max-width: 750px;
+  color: #d69e2e;
+  line-height: 1.4;
+  z-index: 1;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title { font-size: 3rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+}
