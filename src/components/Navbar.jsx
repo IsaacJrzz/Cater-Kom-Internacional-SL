@@ -6,7 +6,8 @@ export default function Navbar() {
     <nav className="navbar-container">
       {/* Logotipo */}
       <div className="nav-logo">
-        CATER-KOM <span>INTERNACIONAL</span>
+        <img src="/logo.png" alt="Cater-Kom Logo" className="nav-logo-img" />
+        <span>CATER-KOM</span>
       </div>
 
       {/* Enlaces de Navegación */}

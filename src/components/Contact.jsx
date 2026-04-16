@@ -1,131 +1,64 @@
-import React, { useState } from 'react';
+import React from 'react';
+import '../index.css';
 
 export default function Contact() {
-  const [btnHover, setBtnHover] = useState(false);
-
-  // --- ESTILOS ---
-  const sectionStyle = {
-    padding: '120px 5%',
-    backgroundColor: '#0a192f',
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    boxSizing: 'border-box',
-    fontFamily: "'Inter', sans-serif",
-  };
-
-  const containerStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '100px', // Espacio generoso para que respire
-    width: '100%',
-    maxWidth: '1200px',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    paddingTop: '40px',
-  };
-
-  const glassCardStyle = {
-    flex: '1 1 500px',
-    backgroundColor: 'rgba(255, 255, 255, 0.03)',
-    backdropFilter: 'blur(20px)',
-    WebkitBackdropFilter: 'blur(20px)',
-    borderRadius: '30px',
-    padding: '50px',
-    paddingTop: '40px',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
-    boxShadow: '0 25px 50px rgba(0,0,0,0.3)',
-    boxSizing: 'border-box'
-  };
-
-  const inputStyle = {
-    width: '100%',
-    padding: '15px',
-    marginBottom: '20px',
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
-    borderRadius: '12px',
-    color: '#fff',
-    fontSize: '1rem',
-    outline: 'none',
-    boxSizing: 'border-box',
-  };
-
-  // --- EL RENDERIZADO (Dentro de la función) ---
   return (
-    <section id="contacto" style={sectionStyle}>
-      {/* Título */}
-      <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-        <h2 style={{ color: '#fff', fontSize: '3.2rem', margin: '0 0 20px 0', fontWeight: '800' }}>
-          Hablemos de tu <span style={{ color: '#128FCC' }}>Proyecto</span>
+    <section id="contacto" className="contact-section">
+      {/* HEADER DE LA SECCIÓN */}
+      <div className="contact-header">
+        <h2 className="contact-title">
+          Hablemos de tu <span>Proyecto</span>
         </h2>
-        <p style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '1.3rem', maxWidth: '600px', margin: '0 auto' }}>
+        <p className="contact-subtitle">
           La solución que tu empresa necesita está a un mensaje de distancia.
         </p>
       </div>
 
-      <div style={containerStyle}>
-        {/* INFO DE CONTACTO */}
-        <div style={{ flex: '1 1 350px', color: '#fff', display: 'flex', flexDirection: 'column', gap: '25px' }}>
-          <h3 style={{ fontSize: '2.2rem', marginBottom: '10px' }}>Contacto Directo</h3>
+      <div className="contact-container">
+        {/* LADO IZQUIERDO: INFO DE CONTACTO */}
+        <div className="contact-info">
+          <h3 className="info-title">Contacto Directo</h3>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-             <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                <span style={{ fontSize: '1.4rem', color: '#128FCC' }}>📍</span>
-                <span style={{ fontSize: '1.1rem', opacity: 0.8 }}>Madrid, Spain</span>
+          <div className="info-list">
+             <div className="info-item">
+                <div className="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <span>Madrid, Spain</span>
              </div>
-             <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                <span style={{ fontSize: '1.4rem', color: '#128FCC' }}>📞</span>
-                <span style={{ fontSize: '1.1rem', opacity: 0.8 }}>+34 900 000 000</span>
+             <div className="info-item">
+                <div className="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.28-2.28a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <span>+34 900 000 000</span>
              </div>
-             <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                <span style={{ fontSize: '1.4rem', color: '#128FCC' }}>✉️</span>
-                <span style={{ fontSize: '1.1rem', opacity: 0.8 }}>info@cater-kom.com</span>
+             <div className="info-item">
+                <div className="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <span>info@cater-kom.com</span>
              </div>
           </div>
 
-          <div style={{ 
-            marginTop: '40px', 
-            padding: '30px', 
-            backgroundColor: 'rgba(18, 143, 204, 0.07)', 
-            borderRadius: '20px', 
-            borderLeft: '5px solid #128FCC' 
-          }}>
-            <strong style={{ fontSize: '1.1rem', display: 'block', marginBottom: '8px' }}>Compromiso Cater-Kom:</strong>
-            <span style={{ opacity: 0.7 }}>Respuestas en menos de 2 horas.</span>
+          <div className="commitment-card">
+            <strong>Compromiso Cater-Kom:</strong>
+            <span>Respuestas en menos de 2 horas.</span>
           </div>
         </div>
 
-        {/* FORMULARIO */}
-        <div style={glassCardStyle}>
-          <form onSubmit={(e) => e.preventDefault()}>
-            <input type="text" placeholder="Tu Nombre" style={inputStyle} />
-            <input type="email" placeholder="Correo Electrónico" style={inputStyle} />
-            <textarea 
-              placeholder="¿Cómo podemos ayudarte?" 
-              rows="5" 
-              style={{ ...inputStyle, resize: 'none' }}
-            ></textarea>
-            <button 
-              type="submit" 
-              onMouseEnter={() => setBtnHover(true)}
-              onMouseLeave={() => setBtnHover(false)}
-              style={{
-                width: '100%',
-                padding: '18px',
-                backgroundColor: btnHover ? '#ffffff' : '#128FCC',
-                color: btnHover ? '#128FCC' : '#ffffff',
-                border: 'none',
-                borderRadius: '12px',
-                fontSize: '1.1rem',
-                fontWeight: 'bold',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                boxShadow: btnHover ? '0 10px 20px rgba(18, 143, 204, 0.3)' : 'none',
-              }}
-            >
+        {/* LADO DERECHO: FORMULARIO GLASSMORFICO */}
+        <div className="contact-form-card">
+          <form onSubmit={(e) => e.preventDefault()} className="contact-form">
+            <div className="input-group">
+              <input type="text" placeholder="Tu Nombre" required />
+            </div>
+            <div className="input-group">
+              <input type="email" placeholder="Correo Electrónico" required />
+            </div>
+            <div className="input-group">
+              <textarea placeholder="¿Cómo podemos ayudarte?" rows="5" required></textarea>
+            </div>
+            <button type="submit" className="contact-submit-btn">
               Enviar Mensaje
             </button>
           </form>
