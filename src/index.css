@@ -952,14 +952,19 @@ body {
     #root .hero-section {
         height: auto !important;
         min-height: 40vh !important; /* No necesita ser 100vh para no dejar huecos */
-        padding: 0px 0px !important; /* Padding menor al no haber Navbar */
+        padding: 0px 20px !important; /* Padding menor al no haber Navbar */
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
+        font-size: 8.8rem;
+    }
+
+    #root .hero-subtitle-reflect {
+      font-size: 5.2rem !important;
     }
 
     #root .hero-title-reflect {
-        font-size: 6.8rem !important;
+        font-size: 8.8rem !important;
         margin-bottom: 15px !important;
         line-height: 1.1 !important;
     }
