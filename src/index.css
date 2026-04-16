@@ -938,73 +938,39 @@ body {
 
 .footer-legal-links a:hover { color: rgba(255, 255, 255, 0.5); }
 
-/* ==========================================================================
-   RESPONSIVE FINAL: ELIMINADOR DE HUECOS Y ESCALADO REAL
-   ========================================================================== */
+/* ============================================================
+   ESTRATEGIA MÓVIL: SOLO HERO Y CONTACTO
+   ============================================================ */
 
-@media screen and (max-width: 991px) {
-    /* 1. Reset de altura para eliminar el "huevo" gigante */
+@media (max-width: 768px) {
+    /* 1. Ocultamos las secciones pesadas */
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    /* 2. Ajustamos el Hero para que sea la estrella */
     #root .hero-section {
         height: auto !important;
-        min-height: 0 !important; /* Matamos el 100vh que crea el hueco */
-        padding-top: 100px !important;
-        padding-bottom: 40px !important;
+        min-height: 90vh !important; /* Casi toda la pantalla */
+        padding-top: 120px !important;
+        padding-bottom: 60px !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: flex-start !important;
+        justify-content: center !important;
     }
 
-    /* 2. Forzamos que nada se vea "enano" subiendo el tamaño base */
+    /* 3. Aseguramos que el título se vea bien grande */
     #root .hero-title-reflect {
-        font-size: 3rem !important; /* Tamaño contundente */
+        font-size: 3rem !important;
         line-height: 1.1 !important;
         width: 100% !important;
-        padding: 0 10px !important;
-        margin-top: 20px !important;
-        margin-bottom: 15px !important;
-        -webkit-text-fill-color: white !important;
-        display: block !important;
+        margin-bottom: 20px !important;
     }
 
-    #root .hero-subtitle-reflect {
-        font-size: 1.1rem !important;
-        line-height: 1.4 !important;
-        margin-bottom: 30px !important;
-        padding: 0 20px !important;
-        display: block !important;
-    }
-
-    /* 3. El Dashboard/Showcase: Si lo ves pequeño es por la altura fija */
-    #root .hero-showcase-container {
-        margin-top: 20px !important;
-        margin-bottom: 0 !important; /* Evita hueco inferior */
-        width: 100% !important;
-        transform: none !important;
-        perspective: none !important;
-    }
-
-    #root .showcase-window {
-        height: auto !important; /* Que el alto lo de el contenido, no un número */
-        min-height: 250px !important;
-        transform: none !important;
-        width: 100% !important;
-    }
-
-    /* 4. Siguiente sección (About): Pegarla al Hero */
-    #root .about-section {
+    /* 4. Pegamos la sección de contacto */
+    #root .contact-section {
+        padding: 60px 20px !important;
         margin-top: 0 !important;
-        padding-top: 40px !important; /* Ajusta esto para acercar o alejar */
-    }
-
-    /* 5. Corrección de estiramiento lateral */
-    *, *::before, *::after {
-        max-width: 100vw !important;
-    }
-}
-
-/* Ajuste para evitar que el texto se rompa en iPhone SE */
-@media screen and (max-width: 380px) {
-    #root .hero-title-reflect {
-        font-size: 2.4rem !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
