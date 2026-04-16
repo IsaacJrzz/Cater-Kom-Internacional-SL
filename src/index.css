@@ -938,125 +938,87 @@ body {
 
 .footer-legal-links a:hover { color: rgba(255, 255, 255, 0.5); }
 
-/* ==========================================================================
-   RESPONSIVE TOTAL: CATER-KOM GLOBAL (CORREGIDO Y BLINDADO)
-   ========================================================================== */
+/* =============================================================
+   EL RESPONSIVE DEFINITIVO (USANDO SELECTOR DE ID #ROOT)
+   ============================================================= */
 
-/* 1. Reset preventivo para evitar scroll lateral en cualquier dispositivo */
-html, body {
+@media screen and (max-width: 991px) {
+  
+  /* Forzamos que el contenedor raíz no deje escapar nada */
+  #root {
     overflow-x: hidden !important;
     width: 100% !important;
-    position: relative !important;
-    background-color: red!important; /* Color de fondo rojo para detectar cualquier fuga de scroll */
-}
+    display: block !important;
+  }
 
-@media (max-width: 1024px) {
-    .about-container, .contact-container, .footer-container {
-        gap: 40px;
-        padding: 0 20px;
-    }
-}
+  /* NAVBAR: Forzamos el tamaño y posición */
+  #root .navbar-container {
+    width: 90% !important;
+    left: 5% !important;
+    transform: none !important;
+    padding: 10px !important;
+  }
 
-@media (max-width: 768px) {
-    /* --- ESTRUCTURA RAÍZ --- */
-    #root {
-        overflow-x: hidden !important;
-        width: 100% !important;
-    }
+  #root .nav-list {
+    display: none !important; /* Escondemos el menú de escritorio */
+  }
 
-    /* --- NAVBAR --- */
-    .navbar-container {
-        width: 90% !important;
-        padding: 10px 15px !important;
-        top: 10px !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-    }
-    
-    .nav-list { display: none !important; }
-    
-    .nav-logo-img { height: 26px !important; }
-    .nav-logo span { font-size: 0.75rem !important; letter-spacing: 1px !important; }
+  /* HERO: Aquí es donde se veía 'enano' */
+  #root .hero-section {
+    padding-top: 100px !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
 
-    /* --- HERO (EL BLOQUE CRÍTICO) --- */
-    .hero-section {
-        padding-top: 120px !important;
-        height: auto !important;
-        min-height: 100vh !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        margin-bottom: 0 !important;
-    }
+  /* TÍTULO: Usamos #root para que sea la regla más fuerte del archivo */
+  #root .hero-title-reflect {
+    font-size: 3.5rem !important; /* ¡Ahora sí o sí tiene que verse grande! */
+    line-height: 1.1 !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 20px !important;
+    padding: 0 10px !important;
+    display: block !important;
+  }
 
-    /* Usamos selectores combinados para asegurar que gane al escritorio */
-    .hero-main-container.central-layout .hero-title-reflect {
-        font-size: 3rem !important; /* Tamaño fijo potente para móvil */
-        line-height: 1.1 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 15px !important;
-        margin-bottom: 1.5rem !important;
-        letter-spacing: -1px !important;
-    }
+  #root .hero-subtitle-reflect {
+    font-size: 1.1rem !important;
+    width: 90% !important;
+    margin: 0 auto 30px !important;
+    display: block !important;
+    line-height: 1.5 !important;
+  }
 
-    .hero-main-container.central-layout .hero-subtitle-reflect {
-        font-size: 1.1rem !important;
-        width: 95% !important;
-        padding: 0 10px !important;
-        margin: 0 auto 2.5rem !important;
-        color: rgba(255, 255, 255, 0.8) !important;
-    }
+  /* DASHBOARD: Lo aplanamos */
+  #root .hero-showcase-container {
+    perspective: none !important;
+    transform: none !important;
+    width: 95% !important;
+    margin: 20px auto !important;
+  }
 
-    .btn-glow-primary {
-        width: 85% !important;
-        padding: 16px !important;
-        font-size: 1rem !important;
-    }
+  #root .showcase-window {
+    transform: none !important;
+    height: 250px !important;
+    width: 100% !important;
+    animation: none !important;
+  }
 
-    /* --- DASHBOARD / SHOWCASE --- */
-    .hero-showcase-container {
-        margin-top: 3rem !important;
-        width: 100% !important;
-        padding: 0 10px !important;
-        perspective: none !important;
-        transform: none !important;
-    }
+  /* SECCIÓN ABOUT: Una columna */
+  #root .about-container {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+    padding: 0 20px !important;
+  }
 
-    .showcase-window {
-        height: 240px !important; /* Más bajito para que quepa todo en el scroll */
-        transform: none !important;
-        animation: none !important;
-        width: 100% !important;
-        border-radius: 15px 15px 0 0 !important;
-    }
-
-    /* --- ABOUT --- */
-    .about-section { padding: 60px 20px !important; }
-    
-    .about-container {
-        grid-template-columns: 1fr !important;
-        gap: 40px !important;
-    }
-
-    .about-title { font-size: 2.2rem !important; }
-
-    .about-pillars {
-        grid-template-columns: 1fr !important;
-        text-align: left !important;
-    }
-
-    /* --- FOOTER --- */
-    .footer-container {
-        grid-template-columns: 1fr !important;
-        gap: 30px !important;
-    }
-}
-
-/* Ajuste iPhone SE / Pantallas muy estrechas */
-@media (max-width: 380px) {
-    .hero-main-container.central-layout .hero-title-reflect {
-        font-size: 2.4rem !important;
-    }
+  #root .about-title {
+    font-size: 2.5rem !important;
+    text-align: center !important;
+  }
 }
