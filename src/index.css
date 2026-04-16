@@ -963,6 +963,10 @@ html, body {
         width: 100% !important;
     }
 
+    body {
+      background-color: red !important; /* Indicador visual de que el CSS se está aplicando */
+    }
+
     /* --- NAVBAR --- */
     .navbar-container {
         width: 90% !important;
