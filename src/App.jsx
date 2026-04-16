@@ -10,26 +10,25 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App" style={{ margin: 0, padding: 0, boxSizing: 'border-box' }}>
+    <div className="App">
       
-      <Navbar />
+      {/* El Navbar ahora desaparece en móvil */}
+      <div className="hide-on-mobile">
+        <Navbar />
+      </div>
 
       <main>
-        {/* El Hero se queda en ambos */}
         <Hero />
-
-        {/* Estas secciones desaparecen en móvil */}
+        
         <div className="hide-on-mobile">
           <Services />
           <About />
         </div>
 
-        {/* El Contacto se queda en ambos */}
         <Contact />
       </main>
 
       <Footer />
-
     </div>
   );
 }

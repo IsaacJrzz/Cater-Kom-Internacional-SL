@@ -943,34 +943,43 @@ body {
    ============================================================ */
 
 @media (max-width: 1200px) {
-    /* 1. Ocultamos las secciones pesadas */
+    /* 1. Limpieza de secciones */
     .hide-on-mobile {
         display: none !important;
     }
 
-    /* 2. Ajustamos el Hero para que sea la estrella */
+    /* 2. Hero: Sin Navbar arriba, bajamos el padding */
     #root .hero-section {
         height: auto !important;
-        min-height: 90vh !important; /* Casi toda la pantalla */
-        padding-top: 120px !important;
-        padding-bottom: 60px !important;
+        min-height: 70vh !important; /* No necesita ser 100vh para no dejar huecos */
+        padding: 60px 20px !important; /* Padding menor al no haber Navbar */
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
     }
 
-    /* 3. Aseguramos que el título se vea bien grande */
     #root .hero-title-reflect {
-        font-size: 3rem !important;
+        font-size: 2.8rem !important;
+        margin-bottom: 15px !important;
         line-height: 1.1 !important;
-        width: 100% !important;
-        margin-bottom: 20px !important;
     }
 
-    /* 4. Pegamos la sección de contacto */
+    /* 3. El Formulario de Contacto (Aseguramos que sea cómodo) */
     #root .contact-section {
-        padding: 60px 20px !important;
-        margin-top: 0 !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 40px 20px !important;
+        background: #020617 !important;
+    }
+
+    /* Si tu formulario está dentro de un Card, forzamos el ancho */
+    .contact-form-card {
+        width: 100% !important;
+        padding: 25px 15px !important;
+        border-radius: 15px !important;
+    }
+
+    /* 4. Footer y Datos de Contacto */
+    .footer-container {
+        padding: 40px 20px !important;
+        text-align: center !important;
     }
 }
