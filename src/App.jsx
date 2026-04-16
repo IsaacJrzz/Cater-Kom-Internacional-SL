@@ -11,23 +11,13 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      
-      {/* El Navbar ahora desaparece en móvil */}
-      <div className="hide-on-mobile">
-        <Navbar />
-      </div>
-
+      <Navbar />
       <main>
         <Hero />
-        
-        <div className="hide-on-mobile">
-          <Services />
+        <Services />
           <About />
-        </div>
-
         <Contact />
       </main>
-
       <Footer />
     </div>
   );

@@ -942,11 +942,7 @@ body {
    RESPONSIVE MAXIMALISTA: CATER-KOM (SOLO HERO Y CONTACTO)
    ========================================================================== */
 
-/* ==========================================================================
-   RESPONSIVE MAXIMALISTA: CORRECCIÓN DE TRANSICIÓN Y LAYOUT
-   ========================================================================== */
-
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
     /* 1. LIMPIEZA */
     .hide-on-mobile {
         display: none !important;
