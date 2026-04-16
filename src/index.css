@@ -942,7 +942,7 @@ body {
    ESTRATEGIA MÓVIL: SOLO HERO Y CONTACTO
    ============================================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     /* 1. Ocultamos las secciones pesadas */
     .hide-on-mobile {
         display: none !important;
