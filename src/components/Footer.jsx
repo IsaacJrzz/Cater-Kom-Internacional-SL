@@ -9,7 +9,7 @@ export default function Footer() {
         {/* BLOQUE DE MARCA */}
         <div className="footer-brand">
           <div className="footer-logo-wrapper">
-            <img src="/logo.png" alt="Cater-Kom" className="footer-logo-img" />
+            <img src="./logo.png" alt="Cater-Kom" className="footer-logo-img" />
           </div>
           <p className="footer-description">
             Cater-Kom Internacional S.L. — Especialistas en suministros industriales y soluciones logísticas integrales para el sector profesional.

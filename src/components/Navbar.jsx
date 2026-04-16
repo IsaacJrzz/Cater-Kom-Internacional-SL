@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className="navbar-container">
       {/* Logotipo */}
       <div className="nav-logo">
-        <img src="/logo.png" alt="Cater-Kom Logo" className="nav-logo-img" />
+        <img src="./logo.png" alt="Cater-Kom Logo" className="nav-logo-img" />
         <span>CATER-KOM</span>
       </div>
 
