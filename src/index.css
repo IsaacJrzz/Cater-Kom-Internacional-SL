@@ -939,100 +939,102 @@ body {
 .footer-legal-links a:hover { color: rgba(255, 255, 255, 0.5); }
 
 @media (max-width: 1200px) {
-    /* 1. Limpieza de secciones innecesarias */
+    /* 1. Limpieza de secciones */
     .hide-on-mobile {
         display: none !important;
     }
 
-    /* 2. Hero: Espaciado masivo para fuentes masivas */
+    /* 2. HERO: Espaciado y Proporciones */
     #root .hero-section {
         height: auto !important;
-        min-height: 60vh !important;
-        padding: 60px 20px !important;
+        min-height: 80vh !important;
+        padding: 100px 24px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 30px !important; /* Espacio entre elementos grandes */
     }
 
-    /* TÍTULO GIGANTE */
+    /* TÍTULO: El Rey */
     #root .hero-title-reflect {
         font-size: 8.8rem !important; 
-        line-height: 0.85 !important; /* Casi pegadas las letras para impacto */
-        margin-bottom: 20px !important;
+        line-height: 0.85 !important;
         text-align: center !important;
-        width: 100% !important;
+        margin-bottom: 60px !important; /* Más espacio con el subtítulo */
+        letter-spacing: -3px !important;
         word-break: break-word !important;
-        letter-spacing: -4px !important; /* Estilo compacto */
     }
 
-    /* SUBTÍTULO: Subimos a 3.2rem para que se pueda leer junto al título */
+    /* SUBTÍTULO: Un poco más pequeño para dar contraste al título */
     #root .hero-subtitle-reflect {
-        font-size: 3.2rem !important;
-        line-height: 1.1 !important;
+        font-size: 2.2rem !important; /* Bajado de 3.2 a 2.2 para jerarquía */
+        line-height: 1.3 !important;
         text-align: center !important;
-        max-width: 100% !important;
-        margin-bottom: 40px !important;
-        color: rgba(255, 255, 255, 0.9) !important;
+        margin-bottom: 80px !important; /* Mucho espacio antes del botón */
+        max-width: 90% !important;
+        color: rgba(255, 255, 255, 0.8) !important;
     }
 
-    /* BOTÓN: Un botón enorme para dedos que no quieren fallar */
+    /* BOTÓN: Gigante y central */
     .btn-glow-primary {
         width: 100% !important;
-        max-width: 500px !important;
-        padding: 30px !important; /* Botón muy alto */
-        font-size: 2.5rem !important; /* Letras del botón grandes */
-        border-radius: 20px !important;
+        max-width: 450px !important;
+        padding: 28px !important;
+        font-size: 1.8rem !important;
+        border-radius: 100px !important;
         text-transform: uppercase !important;
+        letter-spacing: 2px !important;
     }
 
-    /* 3. CONTACTO: Formulario adaptado al tamaño visual */
-    #root .contact-section {
-        padding: 80px 20px !important;
+    /* 3. CONTACTO: Layout Vertical (Uno arriba del otro) */
+    #root .contact-container {
+        display: flex !important;
+        flex-direction: column !important; /* FORZAMOS VERTICAL */
+        gap: 80px !important; /* Espacio entre Formulario y Datos */
+        padding: 80px 24px !important;
+        align-items: center !important;
     }
 
-    /* Inputs y Labels gigantes */
+    /* EL FORMULARIO (Arriba) */
     .contact-form-card {
         width: 100% !important;
-        max-width: 800px !important;
-        margin: 0 auto !important;
+        order: 1 !important; /* Aseguramos que vaya primero */
     }
 
-    /* Escalamos los campos del formulario */
     .contact-form-card input, 
     .contact-form-card textarea {
-        font-size: 2rem !important; /* Para que escribir sea cómodo en este tamaño */
-        padding: 25px !important;
-        margin-bottom: 20px !important;
-        border-width: 3px !important; /* Bordes más gruesos para que no se vean finos */
+        font-size: 1.6rem !important;
+        padding: 22px !important;
+        margin-bottom: 25px !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 2px solid rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
     }
 
-    .contact-form-card label {
-        font-size: 1.8rem !important;
-        margin-bottom: 10px !important;
-        display: block !important;
+    /* LOS DATOS DE CONTACTO (Abajo) */
+    .contact-info-wrapper {
+        width: 100% !important;
+        order: 2 !important; /* Va debajo del formulario */
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
     }
 
-    /* Botón de enviar formulario */
-    .contact-form-card button {
-        font-size: 2.2rem !important;
-        padding: 25px !important;
+    .contact-info-item {
+        font-size: 2rem !important; /* Tamaño grande coherente */
+        justify-content: center !important;
     }
 
-    /* 4. FOOTER: Datos de contacto legibles */
+    /* 4. FOOTER: Final de página */
     .footer-container {
-        padding: 80px 20px !important;
+        padding: 100px 24px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        text-align: center !important;
     }
 
     .footer-description {
-        font-size: 2rem !important;
-        line-height: 1.3 !important;
-    }
-
-    /* Iconos o datos de contacto */
-    .contact-info-item {
         font-size: 1.8rem !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 40px !important;
     }
 }
