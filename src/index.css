@@ -947,6 +947,7 @@ html, body {
     overflow-x: hidden !important;
     width: 100% !important;
     position: relative !important;
+    background-color: red!important; /* Color de fondo rojo para detectar cualquier fuga de scroll */
 }
 
 @media (max-width: 1024px) {
